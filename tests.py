@@ -1,0 +1,31 @@
+from gates import *
+
+def testAnd():
+    print("testing AND gate:")
+    for a in [0, 1]: ##loops through a = 0, 0
+        for b in [0, 1]: ##loops through b = 0, 1
+            expected = AND1(a,b)
+            actual = AND(a,b)
+            print( f" AND{a}, {b} = {actual} (expected: {expected})")
+            assert actual == expected, f"AND failed for ({a}, {b})"
+    print(" AND passed.\n")
+
+def testOr():
+    print("testing OR gate:")
+    for a in [0, 1]: ##loops through a = 0, 0
+        for b in [0, 1]: ##loops through b = 0, 1
+            expected = OR1(a,b)
+            actual = OR(a,b)
+            print( f" OR{a}, {b} = {actual} (expected: {expected})")
+            assert actual == expected, f"OR failed for ({a}, {b})"
+    print(" OR passed.\n")
+
+def testXOr():
+    print("testing XOR gate:")
+    for a in [0, 1]: ##loops through a = 0, 0
+        for b in [0, 1]: ##loops through b = 0, 1
+            expected = XOR1(a,b)
+            actual = XOR(a,b)
+            print( f" XOR{a}, {b} = {actual} (expected: {expected})")
+            assert actual == expected, f"XOR failed for ({a}, {b})"
+    print(" XOR passed.\n")
